@@ -23,6 +23,8 @@ const Loading = () => {
         const parsedHash = new URLSearchParams(window.location.hash.substring(1));
         const idToken = parsedHash.get("id_token");
 
+        console.log("token" + idToken);
+
         await sendAccessTokenToBackend(idToken);
         navigate("/");
       } catch (error) {

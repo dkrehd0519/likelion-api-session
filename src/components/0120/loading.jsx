@@ -25,7 +25,7 @@ const Loading = () => {
 
         console.log("token: " + code);
 
-        // await sendAccessTokenToBackend(code);
+        await sendAccessTokenToBackend(code);
         // navigate("/");
       } catch (error) {
         console.error("로그인 과정에서 에러가 발생했습니다.", error);

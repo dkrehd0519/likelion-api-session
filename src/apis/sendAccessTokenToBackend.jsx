@@ -1,16 +1,10 @@
 import axios from "axios";
 
-const sendAccessTokenToBackend = async (idToken) => {
+const sendAccessTokenToBackend = async (code) => {
   try {
-    const serverResponse = await axios.post(
-      `${process.env.REACT_APP_HOST_URL}/api/auth/loginFormalMethod/callback`,
-      {},
-      {
-        headers: {
-          Authorization: `Bearer ${idToken}`,
-        },
-      }
-    );
+    const serverResponse = await axios.get(`${process.env.REACT_APP_HOST_URL}/api/auth/loginFormalMethod/callback`, {
+      params: { code: code },
+    });
     // 서버로부터의 응답 처리
     console.log("Login successful with server response:", serverResponse);
 

@@ -3,7 +3,7 @@ import axios from "axios";
 const sendAccessTokenToBackend = async (idToken) => {
   try {
     const serverResponse = await axios.post(
-      `${process.env.REACT_APP_HOST_URL}/login`,
+      `${process.env.REACT_APP_HOST_URL}/api/auth/loginFormalMethod/callback`,
       {},
       {
         headers: {

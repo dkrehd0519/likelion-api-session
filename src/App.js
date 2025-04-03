@@ -5,6 +5,7 @@ import Create from "./components/0115/Create";
 import Update from "./components/0115/Update";
 import GoogleLogin from "./components/0120/loginPage";
 import Loading from "./components/0120/loading";
+import TestPage from "./components/0120/TestPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           {/* <Route path="/create" element={<Create />} /> */}
           {/* <Route path="/update" element={<Update />} /> */}
           <Route path="/" element={<GoogleLogin />} />
+          <Route path="/test" element={<TestPage />} />
           <Route path="/loading" element={<Loading />} />
         </Routes>
       </BrowserRouter>

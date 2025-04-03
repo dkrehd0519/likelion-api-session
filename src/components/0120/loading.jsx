@@ -20,13 +20,13 @@ const Loading = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const parsedQuery = new URLSearchParams(window.location.search.substring(1));
+        const parsedQuery = new URLSearchParams(window.location.search);
         const code = parsedQuery.get("code");
 
         console.log("token: " + code);
 
         await sendAccessTokenToBackend(code);
-        // navigate("/");
+        navigate("/test");
       } catch (error) {
         console.error("로그인 과정에서 에러가 발생했습니다.", error);
       }
